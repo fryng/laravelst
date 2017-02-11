@@ -77,8 +77,11 @@ Route::get('response',function (){
     $status = 200;
     $value = 'text/html;charset=utf-8';
     return response()->view('hello',['message'=>'laravel'])->header('Content-Type',$value);
+<<<<<<< HEAD
 });
 
 Route::get('testResponseRedirect',function (){
     return redirect()->action('PostController@show',1);
+=======
+>>>>>>> 3857b940b13210ba067e3e93a4e65fd9fcebe50e
 });

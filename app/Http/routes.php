@@ -76,6 +76,5 @@ Route::get('response',function (){
     $content = 'hello laravel';
     $status = 200;
     $value = 'text/html;charset=utf-8';
-    return (new Response($content,$status))->header('Content-Type',$value)
-        ->withCookie('site','www.laravel.org','30','/','laravel.app');
+    return response()->view('hello',['message'=>'laravel'])->header('Content-Type',$value);
 });

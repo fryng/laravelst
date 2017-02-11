@@ -82,3 +82,11 @@ Route::get('response',function (){
 Route::get('testResponseRedirect',function (){
     return redirect()->action('PostController@show',1);
 });
+
+Route::get('testViewHello',function (){
+    return view('hello');
+});
+
+Route::get('testViewHome',function (){
+    return view('home');
+});

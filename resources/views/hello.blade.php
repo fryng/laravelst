@@ -1,1 +1,1 @@
-{{$message}}
+欢迎来到{{$sitename}}

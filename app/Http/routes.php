@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use Illuminate\Http\Response;
 
 Route::get('/', function () {
     return view('welcome');
@@ -70,3 +71,11 @@ Route::post('testCsrf',function (){
 
 Route::resource('post','PostController');
 Route::controller('request','RequestController');
+
+Route::get('response',function (){
+    $content = 'hello laravel';
+    $status = 200;
+    $value = 'text/html;charset=utf-8';
+    return (new Response($content,$status))->header('Content-Type',$value)
+        ->withCookie('site','www.laravel.org','30','/','laravel.app');
+});

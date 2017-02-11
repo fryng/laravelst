@@ -1,7 +1,6 @@
 ## usage
+##_first_
 cd *RootDocument* composer install
-<<<<<<< HEAD
 
-=======
->>>>>>> 42cbf95e8fa395ae9547041aea066baaa31887ad
+##_second_
 copy file .env.example as .env
